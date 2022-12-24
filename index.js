@@ -3,13 +3,13 @@ const inputEl = document.querySelector(".input");
 const ulEl = document.querySelector(".list");
 let list = JSON.parse(localStorage.getItem("list"));
 
-list.forEach((task) => {
-  toDoList(task);
-});
-
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   toDoList();
+});
+
+list.forEach((task) => {
+  toDoList(task);
 });
 
 function toDoList(task) {
